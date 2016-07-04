@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   validates :age, numericality: { only_integer: true}
   validates :email, format: { with: /\w+@\w+/ }, presence: true
   #validates :website, format: { with: /https?:\/\/\w+\.\w+/ }
-  validates :website, format: { with: /\Ahttps?:\/\/.+\..+/ }
+  validates :website, format: { with: /\A(https?:\/\/).+\..+/ }
 end
